@@ -1,3 +1,24 @@
+const characterAmountRange = document.getElementById 
+('characterAmountRange')
+
+const characterAmountNumber = document.getElementById 
+('characterAmountNumber')
+
+characterAmountNumber.addEventListener('input', syncCharacterAmount)
+characterAmountRange.addEventListener('input', syncCharacterAmount)
+
+function syncCharacterAmount(e) {
+  const value = e.target.value
+  characterAmountRange.value = value
+  characterAmountNumber.value = value
+}
+
+
+
+
+
+
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
