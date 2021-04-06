@@ -54,10 +54,7 @@ header {
   min-height: 100px;
 }
 
-.form {
-  display: grid;
-  grid-template-columns:auto auto ;
-}
+
 
 
 .card-footer {
