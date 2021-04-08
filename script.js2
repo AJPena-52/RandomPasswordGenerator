@@ -1,0 +1,166 @@
+var upperCase = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
+var lowerCase = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+];
+
+var Characters = [
+    '@',
+    '%',
+    '+',
+    '\\',
+    '/',
+    "'",
+    '!',
+    '#',
+    '$',
+    '^',
+    '?',
+    ':',
+    ',',
+    ')',
+    '(',
+    '}',
+    '{',
+    ']',
+    '[',
+    '~',
+    '-',
+    '_',
+    '.'
+  ];
+  var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
+  function questions() {
+
+    var numberOfCharacters= prompt ("How many number od charactes?");
+    
+    if(isNaN(numberOfCharacters)=== true){
+
+        alert("need to pick a number");
+         return;
+    }
+
+if(numberOfCharacters < 8 || numberOfCharacters > 128){
+    alert("need to stay 8 to 128")
+    
+    return;
+}
+
+var useUpperCase = confirm("click ok to use upper cased");
+var useLowerCase = confirm("need lower");
+var useSpecialCharacters= confirm("khjhj");
+var useNumbers= confirm("361235621");
+
+if(
+    useUpperCase===false && 
+    useLowerCase=== false &&
+    useSpecialCharacters=== false &&
+    useNumbers === false 
+){
+    alert("pick a at least one");
+return;
+}
+
+var useChoices = {
+    numberOfCharacters: numberOfCharacters,
+    useLowerCase : useLowerCase,
+    useNumbers : useNumbers,
+    useUpperCase : useUpperCase,
+    useSpecialCharacters: useSpecialCharacters
+};
+ console.log(useChoices)
+return useChoices;
+  }
+
+  questions()
+
+// random.math.floor 
+var generator = {
+  getNumbers: function() {
+    return String.fromCharcode(math.floor(math.random() * 10+ 48));
+  },
+
+  getLowercases: function() {
+    return String.fromCharCode(math.floor(math.random()* 26 + 97));
+  },
+  getUpperCases: function() {
+    return String.fromCharCode(Math.floor(Math.random() * 26 + 65));
+  },
+
+  getSpecialCharacters: function() {
+    return specialCharacters[Math.floor(Math.random() * specialCharacters.length)]
+  }
+
+};
+
+
+
+//creates the password function createPassword(){ 
+    
+
+
+// var PasswordOptions = questions()
+
+
+
+
+    //click event 
+}
+
+
+
+
+  
+  

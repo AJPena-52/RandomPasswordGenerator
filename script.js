@@ -35,7 +35,7 @@ var specialCharacters = confirm('What about special characters?')
 }
 
 // minimum count
-var minCount = 0;
+var minCount = 8;
 // Empy minimums
 var minNumbers = "";
 var minSpercialCharacters ="";
@@ -45,11 +45,11 @@ var minLowercase ="";
 // functions for generator
 var generator = {
   getNumbers: function() {
-    return String. fromCharcode(math.floor(math.random() * 10+ 48));
+    return String.fromCharcode(math.floor(math.random() * 10+ 48));
   },
 
   getLowercases: function() {
-    return String. fromCharCode(math.floor(math.random()* 26 + 97));
+    return String.fromCharCode(math.floor(math.random()* 26 + 97));
   },
   getUpperCases: function() {
     return String.fromCharCode(Math.floor(Math.random() * 26 + 65));
@@ -86,6 +86,7 @@ if (minSpecial === true) {
   minCount++;
 
 }
+
 
 var randomPassword = "";
 
