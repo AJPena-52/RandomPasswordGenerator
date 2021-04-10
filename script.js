@@ -1,12 +1,11 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+
 
 // Function for the special characters
 
 var specialCharacters = ')(*&^%$#@!';
 
-var  generateBtn = document.getElementById('generate')
-generateBtn.addEventListener('click', writePassword)
+var  GenerateBtn = document.getElementById('generate')
+GenerateBtn.addEventListener('click', writePassword)
 
 
 
@@ -22,34 +21,39 @@ function writePassword() {
 }
 // prompts for the criteria after clicking generate btn
 
-function generatePassword(){
-var characterLength = prompt('Please choose the number of characters for your password. Must be between 8 to 128 characters')
+function generatePassword() {
+  var characterLength = prompt("Please choose the number of characters for your password. Must be between 8 to 128 characters");
 
-var numbers = confirm('Do you want to include numbers in your password?')
+  var numbers = confirm("Do you want to include numbers in your password?")
 
-var lowerCase = confirm('Do you want to include lowercases in your password?')
+  var lowerCase = confirm('Do you want to include lowercases in your password?')
 
-var uppercase = confirm('Do you want to include uppercases in you password?')
+  var uppercase = confirm('Do you want to include uppercases in you password?')
 
-var specialCharacters = confirm('What about special characters?')
-}
+  var SpecialCharacters = confirm('What about special characters?')
+//}
 
 // minimum count
-var minCount = 8;
+var minCount = 0;
 // Empy minimums
 var minNumbers = "";
 var minSpercialCharacters ="";
 var minUppercase ="";
 var minLowercase ="";
 
+
+
+
+
+
 // functions for generator
 var generator = {
   getNumbers: function() {
-    return String.fromCharcode(math.floor(math.random() * 10+ 48));
+    return String.fromCharcode(Math.floor(Math.random() * 10+ 48));
   },
 
   getLowercases: function() {
-    return String.fromCharCode(math.floor(math.random()* 26 + 97));
+    return String.fromCharCode(Math.floor(Math.random()* 26 + 97));
   },
   getUpperCases: function() {
     return String.fromCharCode(Math.floor(Math.random() * 26 + 65));
@@ -63,26 +67,26 @@ var generator = {
 
 
 // if user slecets all for empty minimums
-if (minNumbers === true) {
-  minNumbers = functionArray.getNumbers();
+if (numbers === true) {
+  minNumbers = generator.getNumbers();
   minCount++;
 
 }
 
-if (minLowerCases === true) {
-  minLowerCases = functionArray.getLowerCases();
+if (lowerCase === true) {
+  minLowerCases = generator.getLowerCases();
   minCount++;
 
 }
 
-if (minUpperCases === true) {
-  minUpperCases = functionArray.getUpperCases();
+if (uppercase === true) {
+  minUpperCases = generator.getUpperCases();
   minCount++;
 
 }
 
-if (minSpecial === true) {
-  minSpecialCharacters = functionArray.getSpecialCharacters();
+if (specialCharacters === true) {
+  minSpecialCharacters = generator.getSpecialCharacters();
   minCount++;
 
 }
@@ -92,11 +96,11 @@ var randomPassword = "";
 
 // loop for random characters
 
-for (let i = 0; i < (parseInt(passwordLength) - minCount); i++){
+for (let i = 0; i < (parseInt(characterLength) - minCount); i++){
   var randomNumber= Math.floor(Math.random() * 4);
 
   randomPassword += randomNumber;
-
+}
 
 randomPassword += minNumbers;
 randomPassword += minLowerCases;
@@ -104,8 +108,8 @@ randomPassword += minUpperCases;
 randomPassword += minSpercialCharacters;
 
 
-
+return randomPassword;
 }
 
-// Add event listener to generate button
+
 

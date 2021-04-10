@@ -1,1 +1,4 @@
 # RandomPasswordGenerator
+I started this project by establishing variables and connecting them to my HTML by using getElementById and addEventListner. I then wrote a function to record the in put value by using passwordText.value. I then wrote a function for a series of prompts. I established the mininum for each variable by using an empty string. To estsablish radom characters to be generated, I created a function using the character code and Math.floor and math.random. I then established a conditional statement with each variable for what the user selected. I then wrote a for loop to get random characters. I then added and stored those variable using the += function.
+
+Clearly something went wrong. My prompts are acting correctly but I believe my variables are not being stored. I ran out of time to have this code function correctly and I am open for any suggestions. 
